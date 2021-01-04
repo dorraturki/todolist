@@ -1,0 +1,117 @@
+:root{
+  --bg : #0f0e17 ;
+  --bghover : #110f1d ;
+  --bghov: #191820bb;
+  --headline : #fffffe;
+  --text: #a7a9be;
+  --btn: #ff8906;
+  --btnhover: #e27901;
+  --btntxt: #fffffe;
+  --second: #f25f4c;
+}
+body {
+    margin: 0;
+    min-width: 250px;
+    background-color: var(--bg);
+    font-family: 'Poppins', sans-serif;
+  }
+  
+h2{
+    margin: 5px;
+}
+*{
+      box-sizing: border-box;
+  }
+ul {
+    margin: 0;
+    padding: 0;
+}
+ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    list-style-type: none;
+    background: var(--bghover);
+    color: var(--text);
+    font-size: 18px;
+    transition: 0.2s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+ul li:nth-child(odd) {
+    background: var(--bg);
+  }
+ul li:hover {
+    background: var(--bghov);
+  }
+ul li.checked {
+    background: var(--second);
+    color: #fff;
+    text-decoration: line-through;
+}
+  
+ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: white;
+    border-width: 0px 2px 2px 0px;
+    transform: rotate(40deg);
+    top: 10px;
+    left: 15px;
+    width: 8px;
+    height: 15px;
+    border-style: solid;
+}
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+}
+.close:hover {
+    background-color: var(--btn);
+    color: white;
+}
+   .header {
+    background-color: var(--second);
+    padding: 30px 40px;
+    color: var(--headline);
+    text-align: center;
+  }
+  
+  .header:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  input {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 75%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffc480;
+    color: rgb(238, 238, 238);
+  }
+  .addBtn {
+    padding: 10px;
+    width: 25%;
+    background: var(--btn);
+    color: var(--btntxt);
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
+  }
+  
+  .addBtn:hover {
+    background-color: var(--btnhover);
+  }
